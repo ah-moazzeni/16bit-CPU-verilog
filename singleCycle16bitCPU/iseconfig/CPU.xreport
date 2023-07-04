@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2023-07-04T17:19:51</DateModified>
+  <DateModified>2023-07-05T01:40:15</DateModified>
   <ModuleName>CPU</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>G:/verilog/singleCycle16bitCPU/iseconfig/CPU.xreport</SavedFilePath>

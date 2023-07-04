@@ -43,7 +43,7 @@ integer i;
 		// Wait 100 ns for global reset to finish
 		#100;
 		 
- for (i=0 ; i<5;i=i+1)begin
+ for (i=0 ; i<15;i=i+2)begin
 		pc=i;
 		#10;
 		$display("ins = %b ", ins);

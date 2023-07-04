@@ -21,21 +21,33 @@
 module memoryFile( input [15:0] address,input [15:0]  mem_write_data,input clk, input mem_write_en,  output [15:0] readData
     );
 
-reg [15:0] mem [1023:0];
+reg [15:0] temp [511:0];
 
-integer i ; 
+
+
+reg [7:0]  mem  [1023:0]; //memory
+
+
+
+integer j;
+
  initial begin  
-          $readmemb("./input/data1.txt", mem);
+          $readmemb("./input/data2.txt", temp);
+			 for (j=0 ; j<512;j=j+1)begin 
+		  mem[2*j] = temp[j][15:8];
+        mem[2*j+1] = temp[j][7:0];
+	end
       end  
 		
 		
  always @(negedge clk) begin  
       if (mem_write_en)  begin
-           mem[address] <= mem_write_data; 
-			  $display("data=%b  is written in  address=%b",mem_write_data, address);
+           mem[2*address] <= mem_write_data[15:8]; 
+			  mem[2*address+1] <= mem_write_data[7:0]; 
+			  $display("data=%b  is written in  address=%b  and %b",mem_write_data, 2*address[7:0],2*address+1);
 		end	
 	
       end  
 
-assign readData = mem [address] ; 
+assign readData = {mem [2*address],mem[2*address+1]} ; 
 endmodule

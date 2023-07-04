@@ -48,7 +48,7 @@ PC pcc (
     .p(pc), 
     .j(jump || branch)
     );
-assign next_pc = (jump || (branch&&zero)) ? ((jump) ? {pc[15:13],ins[12:0]} : (pc+1+res)) : pc+1; 
+assign next_pc = (jump || (branch&&zero)) ? ((jump) ? {pc[15:13],ins[12:0]} : (pc+2+res)) : pc+2; 
 signExtend sginextend (
     .inp(ins[4:0]), 
     .res(res)
