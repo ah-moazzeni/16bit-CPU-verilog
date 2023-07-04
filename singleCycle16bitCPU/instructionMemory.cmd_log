@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj singleCycle16bitCPU -o G:/verilog/singleCycle16bitCPU/instructionMemory.tfi -lib work G:/verilog/singleCycle16bitCPU//instructionMemory.v -module instructionMemory -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj singleCycle16bitCPU -o G:/verilog/singleCycle16bitCPU/ALU.tfi -lib work G:/verilog/singleCycle16bitCPU//ALU.v -module ALU -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 
